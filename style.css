@@ -1,0 +1,234 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 25, 27);
+    position: sticky;
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 30px 0px;
+}
+.navbar ul li{
+    font-family: Lora;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 12px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: rgb(170, 170, 170);
+    color: black;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+/* Hem sektionen */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#home::before{ 
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('img/pic4.jpeg') no-repeat center center/cover;
+    height: 950px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.headings{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 30px 0px;
+}
+/*Knapp till Hire Me, även en hover effekt över knappen*/
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: .6s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+}
+/*About Me sektionen*/
+#about{
+    display: flex;
+    box-sizing: border-box;
+    padding: 20px;
+}
+#pic img{
+    width: 455px;
+    height: 400px;
+    display: flex;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/*Portfolio sektion*/
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.gallery img{
+    width: 1300px;
+    height: 600px;
+    margin: 10px;
+}
+
+/*Skills sektion*/
+#skills{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 459px;
+    border: 1px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgb(64, 63, 68) 50%, white 50%);
+    background-size: 100% 200%;
+    transition: all .8s;
+}
+.box:hover{
+    background-position: left bottom;
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgb(64, 63, 68);
+}
+.box img{
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    padding: 10px;
+}
+/*Contact me sektion*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+#msg{
+    width: 30%;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+}
+#send{
+    padding: 10px;
+    width: 10%;
+    margin: 40px;
+    border: none;
+    outline: none;
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+#success {
+    color: darkcyan;
+}
+
+/* Webbsidan anpassad utifrån mobil*/
+
+@media only screen and (max-width: 550px){
+    nav ul{
+        height: 130px;
+        flex-direction: column;
+        text-align: center;
+      
+    }
+}

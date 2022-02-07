@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--Här är min css kopplade till min html kod-->
+  </head>
+  <body>
+   
+<!--WCAG 1.3.2 A, presenter inehållet i ordning dvs navbaren är
+i samma ordning som du skrollar ner på webbsidan.-->
+
+<!--WCAG 1.4.10 AA, skapat en flexibel layout dvs att webbsidan
+fungerar båda i mobil men också på datan. Fixat med hjälp av media
+queries på css.-->
+
+    <nav class="navbar">
+      <!--Från nav till slutet på nav har vi min navigations sektion
+    över min header.-->
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="main">
+        <h1 class="headings">
+          SANDRA PROKOFJEVA<br />
+          UX-DESIGNER
+          <!--Mitt namn och titel mitt i min header
+        bakgrundsbilden jag valt.-->
+        </h1>
+        <button class="btn">Hire Me</button>
+        <!--En hire me knapp under mitt namn
+        på framsidan.-->
+      </div>
+    </section>
+
+    <section id="about">
+      <div id="pic">
+        <h1 class="headings">ABOUT ME</h1>
+        <!--Rubrik över texten om mig-->
+        <img src="img/pic1.png" alt="" />
+        <!--Bild på mig-->
+        <div id="intro">
+          <h2>SANDRA PROKOFJEVA</h2>
+          <!-- Hade probelm med att få texten och mitt
+          namn till höger om bilden-->
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
+          </p>
+          <!--''kort om mig'' med använding 
+          av Lorem ipsum-->
+
+      
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <h1 class="headings">PORTFOILIO</h1>
+      <!--Portfolio rubrik-->
+      <div class="gallery">
+        <img src="img/pic2.png" alt="" />
+        <!--Bild på mitt frilans
+            bolag eftertolv och lite av de sakerna vi gjort ihop klippt
+          av ett ''collage'''-->
+      </div>
+    </section>
+
+    <section>
+      <h1 class="headings">SKILLS</h1>
+      <!--Rubrik Sills-->
+      <div class="row">
+        <div class="box">
+          <!--En ruta där jag fyllt i mina färdigheter-->
+          <img src="img/pic.png" alt="" />
+          <!--Ikon över rubriken Graphic Design-->
+          <h1 class="headings>">Graphic Design</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus
+            pellentesque eu tincidunt tortor aliquam nulla. Sagittis id
+            consectetur purus ut faucibus pulvinar elementum integer enim. Nibh
+            cras pulvinar mattis nunc sed. Lectus arcu bibendum at varius vel
+            pharetra vel turpis.
+          </p>
+        </div>
+        <div class="box">
+          <!--En ruta där jag fyllt i mina färdigheter-->
+          <img src="img/pic3.png" alt="" />
+          <!--Ikon över rubriken
+          Event Concept-->
+          <h1 class="headings>">Event Concept</h1>
+          <!--En rubrik-->
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus
+            pellentesque eu tincidunt tortor aliquam nulla. Sagittis id
+            consectetur purus ut faucibus pulvinar elementum integer enim. Nibh
+            cras pulvinar mattis nunc sed. Lectus arcu bibendum at varius vel
+            pharetra vel turpis.
+          </p>
+        </div>
+        <div class="box">
+          <!--En ruta där jag fyllt i mina färdigheter-->
+          <img src="img/pic4.png" alt="" />
+          <!--Ikon över rubriken UX/UI-->
+          <h1 class="headings>">UX/UI<br />Design</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus
+            pellentesque eu tincidunt tortor aliquam nulla. Sagittis id
+            consectetur purus ut faucibus pulvinar elementum integer enim. Nibh
+            cras pulvinar mattis nunc sed. Lectus arcu bibendum at varius vel
+            pharetra vel turpis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1 class="headings">CONTACT ME</h1> 
+      <!--Rubrik Contact-->
+      <form onsubmit="event.preventDefault(); validateForm() "></form>
+      <form action="" class="form">
+        <input
+          type="text"
+          name="name"
+          class="input"
+          placeholder="Enter Your Name"
+        />
+        <!--Ifyllnings ruta
+    för namn-->
+        <input
+          type="email"
+          name="email"
+          class="input"
+          placeholder="Enter Your Email"
+        />
+        <!--ifyllnings
+    ruta för mail-->
+        <textarea
+          name="msg"
+          id="msg"
+          cols="30s"
+          rows="10"
+          placeholder="Enter Your Message"
+        ></textarea>
+        <!-- Text ruta för meddelandet man kan skriva i-->
+        
+      
+        <input type="submit" value="SEND" id="send" />
+        <p id="success"></p>
+
+        <!--En knapp för Send-->
+      </form>
+    </section>
+
+    <script src="java.js"></script>
+  </body>
+</html>
